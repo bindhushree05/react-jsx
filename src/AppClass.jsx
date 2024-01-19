@@ -27,4 +27,27 @@ export default class AppClass extends Component{
   }
 
   // code here
+  render(){
+    let images=this.imageData()
+    return(
+      <>
+      <div>
+        <h1>Kalvium gallery</h1>
+      </div>
+      <div className="image-container">{
+        images.map((item)=>{
+          return(
+            <div key={item.id}>
+              <img src={item.img} alt='elephant'/>
+
+            </div>
+          )
+        })
+      }
+
+      </div>
+      <div>Using Class Components</div>
+      </>
+    )
+  }
 }
